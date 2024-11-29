@@ -1,0 +1,174 @@
+var express = require("express");
+
+var router = express.Router();
+// Getting the Todo Controller that we just created
+
+var ConsortiumPatientAppointmentController = require("../../controllers/consortiumPatientAppointment.controller");
+
+router.post(
+  "/",
+  ConsortiumPatientAppointmentController.saveConsortiumPatientAppointment
+);
+router.post(
+  "/table",
+  ConsortiumPatientAppointmentController.getConsortiumPatientAppointments
+);
+router.patch(
+  "/",
+  ConsortiumPatientAppointmentController.changeConsortiumPatientAppointmentStatus
+);
+router.delete(
+  "/:id",
+  ConsortiumPatientAppointmentController.removeConsortiumPatientAppointment
+);
+router.post(
+  "/selectList",
+  ConsortiumPatientAppointmentController.selectConsortiumPatientAppointmentList
+);
+router.post(
+  "/checkForDelete",
+  ConsortiumPatientAppointmentController.checkCanBeDeleted
+);
+router.post(
+  "/detail",
+  ConsortiumPatientAppointmentController.getConsortiumPatientAppointmentDetails
+);
+router.post(
+  "/setAppointmentStatusAsWalkIn",
+  ConsortiumPatientAppointmentController.setConsortiumPatientAppointmentStatusAsWalkIn
+);
+router.post(
+  "/setAppointmentStatusAsConsulted",
+  ConsortiumPatientAppointmentController.setConsortiumPatientAppointmentStatusAsConsulted
+);
+router.post(
+  "/validateConsortiumLocationSlotTime",
+  ConsortiumPatientAppointmentController.validateConsortiumLocationSlotTime
+);
+router.post(
+  "/performImport",
+  ConsortiumPatientAppointmentController.performConsortiumPatientAppointmentImport
+);
+router.post(
+  "/loadPatientAppointmentMetrics",
+  ConsortiumPatientAppointmentController.getConsortiumPatientAppointmentMetrics
+);
+
+router.post(
+  "/selectAppointmentStatusList",
+  ConsortiumPatientAppointmentController.selectAppointmentStatusList
+);
+router.post(
+  "/loadCalendarEntries",
+  ConsortiumPatientAppointmentController.getRelevantAppointments
+);
+router.post(
+  "/loadPatientAppointmentCalendarMetrics",
+  ConsortiumPatientAppointmentController.getConsortiumPatientAppointmentCalendarMetrics
+);
+router.post(
+  "/loadPatientAppointmentListForTranscriptionAssignment",
+  ConsortiumPatientAppointmentController.getConsortiumPatientAppointmentListForTranscriptionAssignment
+);
+router.post(
+  "/setPatientAppointmentTranscriptionStatusAsTranscriptionAssigned",
+  ConsortiumPatientAppointmentController.setConsortiumPatientAppointmentTranscriptionStatusAsTranscriptionAssigned
+);
+router.post(
+  "/loadConsortiumUserListForTranscriptionAssignment",
+  ConsortiumPatientAppointmentController.getConsortiumUserListForTranscriptionAssignment
+);
+router.post(
+  "/loadconsortiumCoderAssignlist",
+  ConsortiumPatientAppointmentController.getConsortiumUserListForTranscriptionCoder
+);
+
+router.post(
+  "/getConsortiumUserListForBiller",
+  ConsortiumPatientAppointmentController.getConsortiumUserListForBiller
+);
+router.post(
+  "/loadSystemUserAssignedWorkPoolList",
+  ConsortiumPatientAppointmentController.getSystemUserAssignedWorkPoolList
+);
+router.post(
+  "/loadSystemUserAssignedWorkPoolListForCompletedTask",
+  ConsortiumPatientAppointmentController.getSystemUserAssignedWorkPoolListForCompletedTask
+);
+router.post(
+  "/validateWorkTimeForUserTaskAssignment",
+  ConsortiumPatientAppointmentController.validateWorkTimeForUserTaskAssignment
+);
+router.post(
+  "/setSystemUserDaywiseWorkAllocationActivityAsStarted",
+  ConsortiumPatientAppointmentController.setSystemUserDaywiseWorkAllocationActivityAsStarted
+);
+router.post(
+  "/setSystemUserDaywiseWorkAllocationActivityAsStop",
+  ConsortiumPatientAppointmentController.setSystemUserDaywiseWorkAllocationActivityAsStop
+);
+router.post(
+  "/preloadConsortiumPatientAppointmentForStartAndStopActivity",
+  ConsortiumPatientAppointmentController.preloadConsortiumPatientAppointmentForStartAndStopActivity
+);
+router.post(
+  "/validateConsortiumPatientAppointmentForStartActivity",
+  ConsortiumPatientAppointmentController.validateConsortiumPatientAppointmentForStartActivity
+);
+router.post(
+  "/saveConsortiumPatientAppointmentTranscriptionAttachment",
+  ConsortiumPatientAppointmentController.saveConsortiumPatientAppointmentTranscriptionAttachment
+);
+router.post(
+  "/preloadActivityActionForStopActivity",
+  ConsortiumPatientAppointmentController.preloadActivityActionForStopActivity
+);
+router.post(
+  "/changeTranscriptionAllocationDate",
+  ConsortiumPatientAppointmentController.changeTranscriptionAllocationDate
+);
+router.post(
+  "/loadSystemUserWorkPoolList",
+  ConsortiumPatientAppointmentController.getSystemUserWorkPoolList
+);
+
+router.post(
+  "/validateConsortiumPatientAppointmentForTranscriptionAssignment",
+  ConsortiumPatientAppointmentController.validateConsortiumPatientAppointmentForTranscriptionAssignment
+);
+router.post(
+  "/changeConsortiumPatientAppointmentListActivityPriority",
+  ConsortiumPatientAppointmentController.changeConsortiumPatientAppointmentListActivityPriority
+);
+
+router.post(
+  "/assignCoderToConsortiumPatientAppointment",
+  ConsortiumPatientAppointmentController.assignRolesToConsortiumPatientAppointment
+);
+router.post(
+  "/loadSystemUserWorkReport",
+  ConsortiumPatientAppointmentController.getSystemUserWorkReport
+);
+router.post(
+  "/saveAdhocAppointment",
+  ConsortiumPatientAppointmentController.saveAdhocConsortiumPatientAppointment
+);
+router.post(
+  "/updateAppointmentDetails",
+  ConsortiumPatientAppointmentController.updateConsortiumPatientAppointmentDetails
+);
+router.post(
+  "/duplicateConsortiumPatientAppointmentDictations",
+  ConsortiumPatientAppointmentController.duplicateConsortiumPatientAppointmentDictations
+);
+router.post(
+  "/loadConsortiumPatientAppointmentAttachments",
+  ConsortiumPatientAppointmentController.getConsortiumPatientAppointmentAttachments
+);
+router.post(
+  "/modifyTranscriptionNotes",
+  ConsortiumPatientAppointmentController.modifyConsortiumPatientAppointmentTranscriptionNotes
+);
+
+// Export the Router
+module.exports = router;

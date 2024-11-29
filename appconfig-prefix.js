@@ -1,0 +1,12 @@
+module.exports = {
+
+    FORMULATED_EMP_NAME_STRING_SEP: ' : ',
+
+    FORMULATED_NAME_STRING_SEP: ' - ', 
+
+    CONSORTIUM: 'CNS-',    
+    CONSORTIUM_PATIENT: 'PNT-',    
+    CONSORTIUM_PATIENT_APPOINTMENT: 'APT-',    
+    CONSORTIUM_CHAT_THREAD: 'CT-',    
+
+}
